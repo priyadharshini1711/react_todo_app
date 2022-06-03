@@ -3,7 +3,6 @@ import './App.css';
 import Todos from './components/Todos';
 import Header from './components/layout/header';
 import AddTodo from './components/AddTodo';
-import uuid from 'uuid/v4';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import About from './components/pages/About';
 class App extends Component { 
@@ -47,7 +46,7 @@ class App extends Component {
     // })});
 
     let list = [...this.state.todos]
-    list.map((item,idx)=> {
+    list.forEach((item,idx)=> {
       if(idx === index){
         list[idx].completed = !list[idx].completed;
       }

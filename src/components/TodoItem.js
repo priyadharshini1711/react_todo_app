@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
-    constructor(props){
-        super(props)            
-    }
     getStyle = (isCompleted) =>{
         console.log(this.props.todo.completed);
         return {
@@ -17,7 +13,7 @@ class TodoItem extends Component {
     }
     
   render() {
-      const {id,title,completed } = this.props.todo;
+      const {title,completed } = this.props.todo;
       const {index} = this.props;
       
       return (
@@ -46,10 +42,6 @@ const btnStyle = {
     float: 'right',
 
 }
-//Prop types
-// TodoItem.proptypes = {
-//     todo: PropTypes.object.isRequired
-// }
 
 
 
